@@ -1,4 +1,5 @@
 .idea
 __pycache__
-fma_metedata.zip
 fma_metadata.zip
+fma_metadata/*
+fma_metadata
