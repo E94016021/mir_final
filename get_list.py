@@ -3,7 +3,7 @@ import numpy as np
 
 if __name__ == "__main__":
 
-    names = ["Blues.npy", "Classical.npy", "Country.npy", "Electronic_fake.npy",
+    names = ["Blues.npy", "Classical.npy", "Country.npy", "Electronic.npy",
              "ex_chip.npy", "Experimental.npy", "Folk.npy", "Hip-Hop.npy",
              "Instrumental.npy", "International.npy", "Jazz.npy",
              "Pop.npy", "Rock.npy", "Soul-RnB.npy", "Spoken.npy", "old_time.npy", "Easy Listening.npy"]
