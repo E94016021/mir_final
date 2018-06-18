@@ -1,6 +1,11 @@
 import pandas as pd
 import numpy as np
 
+'''
+check the two most small genres' cnt
+
+'''
+
 
 def genre_id2top_id(input_id, top):
     g_id = top.genre_id
@@ -26,8 +31,7 @@ if __name__ == '__main__':
     tracks = pd.read_csv('fma_metadata/raw_tracks.csv')
     genres = pd.read_csv('fma_metadata/genres.csv')
 
-    target_id_list = [8,13]
-    cntccc = 0
+    target_id_list = [8, 13]
     try:
 
         for target_genre_id in target_id_list:
@@ -45,7 +49,7 @@ if __name__ == '__main__':
                             # test if without genre
                             test = tracks.track_genres[track_id]
                             if type(test) is float:
-                                print("track_id:%d" % track_id, "no genre")
+                                # print("track_id:%d" % track_id, "no genre")
                                 no_genre_cnt += 1
                                 continue
 
@@ -61,9 +65,8 @@ if __name__ == '__main__':
                             print("id:%d" % track_id, "inner ERROR :", e)
                     print("*")
                     print(target_genre_tracks)
-                    string = "min"+cntccc + ".npy"
-                    cntccc+=1
-                    np.save(string, target_genre_tracks)
+                    string = genre_id2genre_title(target_genre_id, genres).split("/")[0]
+                    np.save(string + ".npy", target_genre_tracks)
 
                     print("count of no genre's file", no_genre_cnt)
 

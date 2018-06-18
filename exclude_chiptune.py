@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
+'''
+make chip out of set
 
+'''
 
 def genre_id2top_id(input_id, top):
     g_id = top.genre_id

@@ -1,5 +1,9 @@
-import pandas as pd
 import numpy as np
+import os
+'''
+get list count
+
+'''
 
 if __name__ == "__main__":
 
@@ -9,7 +13,8 @@ if __name__ == "__main__":
              "Pop.npy", "Rock.npy", "Soul-RnB.npy", "Spoken.npy", "old_time.npy", "Easy Listening.npy"]
 
     for name in names:
-        elec_list = np.load(name)
+        p = os.path.join("out_set",name )
+        elec_list = np.load(p)
         print(name.split(".npy")[0], "cnt =", elec_list.shape[0])
 
     print(".")
